@@ -1,0 +1,10 @@
+Package: config-profiles
+Version: 1.26
+Section: cws
+Priority: optional
+Architecture: all
+Essential: no
+Installed-Size: 1
+Maintainer: Luke Scott [luke at cronworks dot net]
+Provides: config-profiles
+Description: [cws] Custom configuration profiles which auto-recover during login

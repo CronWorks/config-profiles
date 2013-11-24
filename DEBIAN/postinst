@@ -1,0 +1,12 @@
+#!/bin/sh
+
+chmod 755 /etc/profile.d/custom-login.sh
+chown root:root /etc/profile.d/custom-login.sh
+chmod 755 /usr/local/bin/custom-login
+chown root:root /usr/local/bin/custom-login
+
+chown root:root /usr/local/share/installed-profiles
+chmod 755 /usr/local/share/installed-profiles
+chown root:root /usr/local/share/installed-profiles/base
+chmod 644 /usr/local/share/installed-profiles/base
+
