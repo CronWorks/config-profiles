@@ -1,5 +1,5 @@
 Package: config-profiles
-Version: 1.26
+Version: 1.30
 Section: cws
 Priority: optional
 Architecture: all
