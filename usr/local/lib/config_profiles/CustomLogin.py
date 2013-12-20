@@ -151,3 +151,4 @@ if __name__ == '__main__':
     CustomLogin.getInstalledProfiles = fakeProfiles
     runMockJob(CustomLogin,
                config={'loginScriptFolder': '/home/luke/Reference/Config/profiles'})
+

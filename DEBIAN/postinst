@@ -2,11 +2,19 @@
 
 chmod 755 /etc/profile.d/custom-login.sh
 chown root:root /etc/profile.d/custom-login.sh
+
+chmod 755 /etc/xdg/autostart/gnome-settings-daemon-killer.desktop
+chown root:root /etc/xdg/autostart/gnome-settings-daemon-killer.desktop
+
 chmod 755 /usr/local/bin/custom-login
 chown root:root /usr/local/bin/custom-login
+
+chmod 755 /usr/local/lib/config_profiles/gnome-settings-daemon-killer
+chown root:root /usr/local/lib/config_profiles/gnome-settings-daemon-killer
 
 chown root:root /usr/local/share/installed-profiles
 chmod 755 /usr/local/share/installed-profiles
 chown root:root /usr/local/share/installed-profiles/base
 chmod 644 /usr/local/share/installed-profiles/base
+
 
