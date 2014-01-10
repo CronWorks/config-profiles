@@ -23,7 +23,6 @@ class CustomLogin(Job):
     def doRunSteps(self):
         fullPath = self.getFullPathFromArg(self.config['loginScriptFolder'])
         self.runLoginScripts(fullPath)
-        self.restartGnomeSettingsDaemon()
 
     def runLoginScripts(self, scriptDir):
         installedProfiles = self.getInstalledProfiles()
@@ -139,9 +138,6 @@ class CustomLogin(Job):
             # probably in debug environment - directory doesn't exist
             fileList = []
         return sorted(fileList)
-
-    def restartGnomeSettingsDaemon(self):
-        self.system.runCommand(['killall', 'gnome-settings-daemon'])
 
 if __name__ == '__main__':
     from py_base.Job import runMockJob
