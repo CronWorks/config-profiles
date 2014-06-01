@@ -3,7 +3,7 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3 of the License, or
-# (at your option) any later version. 
+# (at your option) any later version.
 
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -52,7 +52,7 @@ class CustomLogin(Job):
             # do we need to run os-cleanup scripts?
             thisOsHash = self.getOsHash()
             if thisOsHash != self.config['lastLoggedInOsHash']:
-                self.out.put("hash didn't match the last-run hash (%s)." % self.config['lastLoggedInOsHash'], self.out.LOG_LEVEL_MUNDANE)
+                self.out.put("hash didn't match the last-run hash (%s)." % self.config['lastLoggedInOsHash'], self.out.LOG_LEVEL_DEBUG)
                 self.runScript('%s/%s/profile-change' % (scriptDir, profile))
                 self.config['lastLoggedInOsHash'] = thisOsHash
             self.out.unIndent()
@@ -143,7 +143,7 @@ class CustomLogin(Job):
     def getOsHash(self):
         installedProfiles = self.getInstalledProfiles()
         osHash = '|'.join(sorted(installedProfiles))
-        self.out.put('hashed current OS profile to hash key: %s' % osHash, self.out.LOG_LEVEL_MUNDANE)
+        self.out.put('hashed current OS profile to hash key: %s' % osHash, self.out.LOG_LEVEL_DEBUG)
         return osHash
 
     def getInstalledProfiles(self):
