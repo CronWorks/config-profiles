@@ -14,13 +14,11 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-from py_base.Job import Job
-
-
+import gconf
+from gi.repository import Gio
 from os import listdir
 from os.path import dirname, exists, isdir, isfile
-from gi.repository import Gio
-import gconf
+from py_base.Job import Job
 
 
 class CustomLogin(Job):
@@ -29,8 +27,8 @@ class CustomLogin(Job):
     OS's under the same user account.
     '''
 
-    def __init__(self):
-        Job.__init__(self)
+    def __init__(self, **kwargs):
+        Job.__init__(self, **kwargs)
         self.requireUserConfig('loginScriptFolder', str, "Where do you want to keep your stored profiles?")
         self.config['installedOsProfilesFolder'] = '/usr/local/share/installed-profiles'
         self.config['lastLoggedInOsHash'] = ''
