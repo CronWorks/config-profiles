@@ -14,8 +14,10 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-import gconf
+# This one needs to be before 'import gconf' to avoid static import errors
 from gi.repository import Gio
+
+import gconf
 from os import listdir
 from os.path import dirname, exists, isdir, isfile
 from py_base.Job import Job
