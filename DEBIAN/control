@@ -3,6 +3,7 @@ Version: 1.40
 Section: cws
 Priority: optional
 Architecture: all
+Depends: python-gconf
 Essential: no
 Installed-Size: 1
 Maintainer: Luke Scott [luke at cronworks dot net]
